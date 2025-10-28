@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using opggave4.Services;
 
 namespace opggave4.Models
 {
-    public class Caers
+    public class FdaReport
     {
         public string ReportNumber { get; set; } = string.Empty;                  // RA_Report #
         public DateTime? CreatedDate { get; set; }               // RA_CAERS Created Date

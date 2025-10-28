@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using opggave4.Models;
+
 
 namespace opggave4.Services
 {
@@ -31,7 +33,7 @@ namespace opggave4.Services
         //Parsing: Bruk string-manipulasjon (.Split()) for å konvertere rader til objekter.
 
 
-        public List<FdaReport> Reed(string path)
+        public List<FdaReport> Read(string path)
         {
             var lines = File.ReadAllLines(path);
             if (lines.Length == 0) return new List<FdaReport>();
@@ -79,9 +81,8 @@ namespace opggave4.Services
                 };
 
                 list.Add(item);
-
-                return list; //I returned the finished part of the base bundle.
             }
+            return list; //I returned the finished part of the base bundle.
         }
     }
 }
