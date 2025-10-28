@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("opggave4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a3b6ba4c14091e8c73f5e5eb61559075da5de89")]
 [assembly: System.Reflection.AssemblyProductAttribute("opggave4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("opggave4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
