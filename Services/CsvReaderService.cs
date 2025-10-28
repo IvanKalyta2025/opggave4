@@ -46,7 +46,11 @@ namespace opggave4.Services
             for (int i = 0; i < headerCells.Length; i++)
                 map[headerCells[i].Trim()] = i;
             //we remove all problems from the line to map
-
+            //header check and error
+            foreach (var h in Headers)
+                if (!map.ContainsKey(h))
+                    Console.WriteLine($"I didn't find a title with the name {h}");
+            //compare the header from private static readonly string[] Headers = new[]
 
 
 
