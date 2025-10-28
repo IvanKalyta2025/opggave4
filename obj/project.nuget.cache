@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7CYFt/myu2U=",
+  "success": true,
+  "projectFilePath": "/Users/ivan/Desktop/opggave4/opggave4.csproj",
+  "expectedPackageFiles": [
+    "/Users/ivan/.nuget/packages/microsoft.aspnetcore.openapi/9.0.9/microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
+    "/Users/ivan/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

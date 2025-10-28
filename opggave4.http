@@ -1,0 +1,6 @@
+@opggave4_HostAddress = http://localhost:5076
+
+GET {{opggave4_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
