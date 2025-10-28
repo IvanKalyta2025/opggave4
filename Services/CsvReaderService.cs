@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace opggave4.Services
 {
@@ -58,6 +59,26 @@ namespace opggave4.Services
                 if (string.IsNullOrWhiteSpace(line))
                     continue;
                 //Line check. Skip the first line of the header and check further. If the line is empty, move on.
+                var cells = line.Split(',');
+
+                var item = new FdaReport
+
+                {
+                    ReportNumber = cells[0],
+                    CreatedDate = DateTime.TryParse(cells[1], out var d1) ? d1 : null,
+                    EventStartDate = DateTime.TryParse(cells[2], out var d2) ? d2 : null,
+                    ProductRole = cells[3],
+                    ProductName = cells[4],
+                    IndustryCode = cells[5],
+                    IndustryName = cells[6],
+                    AgeAtEvent = cells[7],
+                    AgeUnit = cells[8],
+                    Gender = cells[9],
+                    Outcome = cells[10],
+                    Symptoms = cells[11]
+                };
+                list.Add(item);
+
             }
         }
     }
