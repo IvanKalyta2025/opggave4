@@ -51,9 +51,14 @@ namespace opggave4.Services
                 if (!map.ContainsKey(h))
                     Console.WriteLine($"I didn't find a title with the name {h}");
             //compare the header from private static readonly string[] Headers = new[]
+            var list = new List<FdaReport>();
 
-
-
+            foreach (var line in lines.Skip(1))
+            {
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+                //Line check. Skip the first line of the header and check further. If the line is empty, move on.
+            }
         }
     }
 }
