@@ -33,6 +33,17 @@ namespace opggave4.Services
         public List<FdaReport> Reed(string path)
         {
             var lines = File.ReadAllLines(path);
+            if (lines.Length == 0) return new List<FdaReport>();
+            var headerLine = lines[0];
+            var headerCells = headerLine.Split(',');
+
+            //read the CSV, check the empty database so that there are no errors.
+            //headerLine accepts headers for future data maps
+            //headerCells splits the split headerLine and retrieves the deleted data.
+
+            var map = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+            //we store headers and values
+
 
         }
     }
