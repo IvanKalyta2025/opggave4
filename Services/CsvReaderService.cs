@@ -77,8 +77,10 @@ namespace opggave4.Services
                     Outcome = cells[10],
                     Symptoms = cells[11]
                 };
+
                 list.Add(item);
 
+                return list; //I returned the finished part of the base bundle.
             }
         }
     }
