@@ -43,6 +43,11 @@ namespace opggave4.Services
 
             var map = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
             //we store headers and values
+            for (int i = 0; i < headerCells.Length; i++)
+                map[headerCells[i].Trim()] = i;
+            //we remove all problems from the line to map
+
+
 
 
         }
