@@ -14,11 +14,14 @@ namespace opggave4.Controllers
             _data = data;
         }
 
-        public IEnumerable<string> SelectAllProdict;
+        public IEnumerable<string> SelectAllProdictNames()
         //iterate over the entire list using the method IEnumerable
-
+        {
+            return _data
+            .Where(r => !string.IsNullOrWhiteSpace(r.ProductName))
+            .Select(r => r.ProductName);
+        }
         //.Where(contact => contact.Location == "Vestfold")
         //.Select(contact => new { Email = contact.Email, Name = contact.Name });
-
     }
 }

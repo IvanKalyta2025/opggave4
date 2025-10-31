@@ -40,7 +40,7 @@ namespace opggave4.Services
             var headerLine = lines[0];
             var headerCells = headerLine.Split(',');
 
-            //read the CSV, check the empty database so that there are no errors.
+            //read the CSV, check the empty database so that there are no erors.
             //headerLine accepts headers for future data maps
             //headerCells splits the split headerLine and retrieves the deleted data.
 
