@@ -21,6 +21,14 @@ namespace opggave4.Controllers
             .Where(r => !string.IsNullOrWhiteSpace(r.ProductName))
             .Select(r => r.ProductName);
         }
+        public IEnumerable<FdaReport> WhereGender(string gender)
+        {
+            return _data
+                .Where(r => r.Gender != null &&
+                            r.Gender.Equals(gender, StringComparison.OrdinalIgnoreCase));
+        }
+
+
         //.Where(contact => contact.Location == "Vestfold")
         //.Select(contact => new { Email = contact.Email, Name = contact.Name });
     }

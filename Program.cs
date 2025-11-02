@@ -12,7 +12,6 @@ var reports = reader.Read(path);
 
 // I'm reading the lines.
 
-Console.WriteLine(reports.Count);
 Console.WriteLine($"number of terms in the database {reports.Count}");
 
 var controller = new ReportController(reports);
@@ -23,11 +22,16 @@ foreach (var name in controller.SelectAllProdictNames().Take(5))
 
 
 
-Console.WriteLine("\nThe first five IndustryName");
+//Console.WriteLine("\nThe first five IndustryName");
 //IndustryName
-foreach (var industryName in controller.SelectAllProdictNames().Take(5))
-    Console.WriteLine($"{industryName}");
+//foreach (var industryName in controller.SelectAllProdictNames().Take(5))
+//Console.WriteLine($"{industryName}");
 
 //I take the first five products and put them in the console.
 
 
+Console.WriteLine("\n The first five Female Reports (Where):");
+foreach (var report in controller.WhereGender("Female").Take(5))
+{
+    Console.WriteLine($"{report.ReportNumber} | {report.ProductName} | {report.Gender}");
+}
